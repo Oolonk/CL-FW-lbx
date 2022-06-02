@@ -28,6 +28,7 @@ void initializeButtons (pinout inputs) {
     if (inputs.r2          != 255)    pinMode(inputs.r2,          INPUT_PULLUP);
     if (inputs.lightshield != 255)    pinMode(inputs.lightshield, INPUT_PULLUP);
     if (inputs.midshield   != 255)    pinMode(inputs.midshield,   INPUT_PULLUP);
+    if (inputs.lbx         != 255)    pinMode(inputs.lbx,         INPUT_PULLUP);
 }
 
 void readAllButtons(inputStatus *currentStatus, pinout inputs) {
@@ -56,6 +57,7 @@ void readAllButtons(inputStatus *currentStatus, pinout inputs) {
     if (inputs.r2          != 255) currentStatus->r2          = (digitalRead(inputs.r2)          == LOW);
     if (inputs.lightshield != 255) currentStatus->lightshield = (digitalRead(inputs.lightshield) == LOW);
     if (inputs.midshield   != 255) currentStatus->midshield   = (digitalRead(inputs.midshield)   == LOW);
+    if (inputs.lbx         != 255) currentStatus->lbx         = (digitalRead(inputs.lbx)         == LOW);
 
 }
 

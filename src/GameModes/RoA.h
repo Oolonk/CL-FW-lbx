@@ -156,10 +156,10 @@ public:
             outputs.triggerL = 0;
 
         // Dpad is modX + modY + C stick
-        outputs.dpadUp = (inputs->modX && inputs->modY && inputs->r_Up);
-        outputs.dpadDown = (inputs->modX && inputs->modY && inputs->r_Down);
-        outputs.dpadLeft = (inputs->modX && inputs->modY && inputs->r_Left);
-        outputs.dpadRight = (inputs->modX && inputs->modY && inputs->r_Right);
+        outputs.dpadUp = (inputs->lbx && inputs->r_Up);
+        outputs.dpadDown = (inputs->lbx && inputs->r_Down);
+        outputs.dpadLeft = (inputs->lbx && inputs->r_Left);
+        outputs.dpadRight = (inputs->lbx && inputs->r_Right);
 
         if (inputs->midshield)
             outputs.triggerR = 125;

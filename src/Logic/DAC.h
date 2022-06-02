@@ -262,7 +262,7 @@ outputStatus rectangleDAC(inputStatus *inputs, coordinates currentCoords, SOCD l
         }  
     }
     // If both mods are held
-    else if (inputs->modX && inputs->modY) {
+    else if (inputs->lbx) {
         // Disable CStick so the dpad will work as intended.
         returnStatus.rightStickX = currentCoords.neutral;
         returnStatus.rightStickY = currentCoords.neutral;

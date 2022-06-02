@@ -32,6 +32,7 @@ public:
         current_Pinout.y      = original_Pinout.y;
         current_Pinout.r1     = original_Pinout.lightshield;
         current_Pinout.l1     = original_Pinout.midshield;
+        current_Pinout.lbx     = original_Pinout.lbx;
 
         leftXSOCD = leftX;
         leftYSOCD = leftY;
@@ -56,14 +57,14 @@ public:
         outputs.select = inputs->select;
         outputs.home = inputs->home;
 
-        if (inputs->modX && inputs->modY && inputs->home) {
+        if (inputs->lbx && inputs->home) {
             outputs.capture = true;
             outputs.home    = false;
         }
         else
             outputs.capture = false;
 
-        if (inputs->modX && inputs->modY && inputs->select) {
+        if (inputs->lbx && inputs->select) {
             outputs.touchpad = true;
             outputs.select   = false;
         }

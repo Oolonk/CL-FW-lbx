@@ -149,11 +149,11 @@ public:
             outputs.triggerL = 0;
 
         // Dpad is modX + modY + C stick
-        outputs.dpadUp = (inputs->modX && inputs->modY && inputs->r_Up);
-        outputs.dpadDown = (inputs->modX && inputs->modY && inputs->r_Down);
+        outputs.dpadUp = (inputs->lbx && inputs->r_Up);
+        outputs.dpadDown = (inputs->lbx && inputs->r_Down);
         // If you have select/home buttons, those can be used too for faster save/load state
-        outputs.dpadLeft = ((inputs->modX && inputs->modY && inputs->r_Left) || inputs->select);
-        outputs.dpadRight = ((inputs->modX && inputs->modY && inputs->r_Right) || inputs->home);
+        outputs.dpadLeft = ((inputs->lbx && inputs->r_Left) || inputs->select);
+        outputs.dpadRight = ((inputs->lbx && inputs->r_Right) || inputs->home);
         
         return outputs;
     }

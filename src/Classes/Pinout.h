@@ -27,6 +27,7 @@ struct pinout {
     uint8_t cDown      ;
     uint8_t cLeft      ;
     uint8_t cRight     ;
+    uint8_t lbx        ;
 };
 
 #endif

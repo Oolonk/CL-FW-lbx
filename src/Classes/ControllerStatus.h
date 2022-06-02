@@ -38,6 +38,7 @@ struct inputStatus {
     // Modifiers
         bool modX;
         bool modY;
+        bool lbx;
 
     // Digital Buttons
         bool start;

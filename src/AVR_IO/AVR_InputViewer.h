@@ -31,7 +31,7 @@ void sendIVData(inputStatus inputs, int *IVCounter) {
                 inputs.r_Down       ? 0x31 : 0x30,
                 inputs.lightshield  ? 0x31 : 0x30,
                 inputs.midshield    ? 0x31 : 0x30,
-                                             0x30, // These might be needed for some reason
+                inputs.lbx          ? 0x31 : 0x30, // These might be needed for some reason
                                              0x30,
                                              0x30,
                                              0x30,

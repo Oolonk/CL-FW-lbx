@@ -44,6 +44,7 @@ public:
         inputs.r_Down      ? Keyboard.press(keyMap.cDown      ) : Keyboard.release(keyMap.cDown      );
         inputs.r_Left      ? Keyboard.press(keyMap.cLeft      ) : Keyboard.release(keyMap.cLeft      );
         inputs.r_Right     ? Keyboard.press(keyMap.cRight     ) : Keyboard.release(keyMap.cRight     );
+        inputs.lbx         ? Keyboard.press(keyMap.lbx        ) : Keyboard.release(keyMap.lbx        );
 
         sendIVData(inputs, &IVCounter);
     }
