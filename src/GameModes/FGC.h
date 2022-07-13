@@ -26,13 +26,12 @@ public:
         current_Pinout.home   = original_Pinout.home;
         current_Pinout.a      = original_Pinout.b;
         current_Pinout.b      = original_Pinout.x;
-        current_Pinout.r2     = original_Pinout.r1;
-        current_Pinout.l2     = original_Pinout.up;
+        current_Pinout.r2     = original_Pinout.up;
+        current_Pinout.l2     = original_Pinout.r1;
         current_Pinout.x      = original_Pinout.r2;
         current_Pinout.y      = original_Pinout.y;
-        current_Pinout.r1     = original_Pinout.lightshield;
-        current_Pinout.l1     = original_Pinout.midshield;
-        current_Pinout.lbx     = original_Pinout.lbx;
+        current_Pinout.r1     = original_Pinout.midshield;
+        current_Pinout.l1     = original_Pinout.lightshield;
 
         leftXSOCD = leftX;
         leftYSOCD = leftY;

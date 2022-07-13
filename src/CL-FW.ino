@@ -47,7 +47,7 @@
 #elif defined(HAS_SMASHBOX)
     #include "Hardware/Smashbox.h"
 #elif defined(HAS_LBX)
-    #include "Hardware/lbx.h"
+    #include "Hardware/LBX.h"
 #endif
 
 CLFWController controller;

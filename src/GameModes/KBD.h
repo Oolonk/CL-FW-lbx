@@ -22,6 +22,7 @@ public:
         current_Keymap.right       = 'd';
         current_Keymap.modX        = 'e';
         current_Keymap.modY        = 'f';
+        current_Keymap.lbx         = 'x';
         current_Keymap.start       = 'g';
         current_Keymap.select      = 'h';
         current_Keymap.home        = 'i';

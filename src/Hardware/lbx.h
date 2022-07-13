@@ -31,13 +31,18 @@ public:
         original_Pinout.cRight       =   6;
         original_Pinout.lbx          =   2;
 
-        multiplexer  = 255;
+        multiplexer  = A4;
         consoleData  =  7;
 
         current_Pinout   = original_Pinout;
 
         defaultMUX = false;
-        hasUSB = true;
+
+        #if defined(HAS_USB)
+            hasUSB = true;
+        #else
+            hasUSB = false;
+        #endif
     }
 
     pinout current_Pinout;

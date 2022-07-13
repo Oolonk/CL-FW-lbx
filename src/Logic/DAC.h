@@ -91,7 +91,7 @@ outputStatus rectangleDAC(inputStatus *inputs, coordinates currentCoords, SOCD l
     // Modifiers
 
     // If no modifiers are held
-    if (!inputs->modX && !inputs->modY) {
+    if (!inputs->modX && !inputs->modY && !inputs->lbx) {
         if (HORIZONTAL && !DIAGONAL) {
             returnStatus.leftStickX += (positionX * currentCoords.maxOffset);
         }
@@ -262,7 +262,7 @@ outputStatus rectangleDAC(inputStatus *inputs, coordinates currentCoords, SOCD l
         }  
     }
     // If both mods are held
-    else if (inputs->lbx) {
+    else if ((inputs->modX && inputs->modY) || inputs->lbx) {
         // Disable CStick so the dpad will work as intended.
         returnStatus.rightStickX = currentCoords.neutral;
         returnStatus.rightStickY = currentCoords.neutral;
@@ -321,12 +321,12 @@ void digitalHandler(inputStatus *inputs, SOCD leftXSOCD, SOCD leftYSOCD, bool pr
 
     if (leftYSOCD != NormalKeyboard) {
         if (positionY == 1) {
-            inputs->l_Up = false;
-            inputs->l_Down = true;
-        }
-        else if (positionY == -1) {
             inputs->l_Up = true;
             inputs->l_Down = false;
+        }
+        else if (positionY == -1) {
+            inputs->l_Up = false;
+            inputs->l_Down = true;
         }
         else {
             inputs->l_Up = false;

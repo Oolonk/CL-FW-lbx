@@ -15,6 +15,7 @@ void initializeButtons (pinout inputs) {
     if (inputs.cRight      != 255)    pinMode(inputs.cRight,      INPUT_PULLUP);
     if (inputs.modX        != 255)    pinMode(inputs.modX,        INPUT_PULLUP);
     if (inputs.modY        != 255)    pinMode(inputs.modY,        INPUT_PULLUP);
+    if (inputs.lbx         != 255)    pinMode(inputs.lbx,         INPUT_PULLUP);
     if (inputs.start       != 255)    pinMode(inputs.start,       INPUT_PULLUP);
     if (inputs.select      != 255)    pinMode(inputs.select,      INPUT_PULLUP);
     if (inputs.home        != 255)    pinMode(inputs.home,        INPUT_PULLUP);
@@ -28,7 +29,6 @@ void initializeButtons (pinout inputs) {
     if (inputs.r2          != 255)    pinMode(inputs.r2,          INPUT_PULLUP);
     if (inputs.lightshield != 255)    pinMode(inputs.lightshield, INPUT_PULLUP);
     if (inputs.midshield   != 255)    pinMode(inputs.midshield,   INPUT_PULLUP);
-    if (inputs.lbx         != 255)    pinMode(inputs.lbx,         INPUT_PULLUP);
 }
 
 void readAllButtons(inputStatus *currentStatus, pinout inputs) {
@@ -44,6 +44,7 @@ void readAllButtons(inputStatus *currentStatus, pinout inputs) {
     if (inputs.cRight      != 255) currentStatus->r_Right     = (digitalRead(inputs.cRight)      == LOW);
     if (inputs.modX        != 255) currentStatus->modX        = (digitalRead(inputs.modX)        == LOW);
     if (inputs.modY        != 255) currentStatus->modY        = (digitalRead(inputs.modY)        == LOW);
+    if (inputs.lbx         != 255) currentStatus->lbx        = (digitalRead(inputs.lbx)         == LOW);
     if (inputs.start       != 255) currentStatus->start       = (digitalRead(inputs.start)       == LOW);
     if (inputs.select      != 255) currentStatus->select      = (digitalRead(inputs.select)      == LOW);
     if (inputs.home        != 255) currentStatus->home        = (digitalRead(inputs.home)        == LOW);
@@ -57,7 +58,6 @@ void readAllButtons(inputStatus *currentStatus, pinout inputs) {
     if (inputs.r2          != 255) currentStatus->r2          = (digitalRead(inputs.r2)          == LOW);
     if (inputs.lightshield != 255) currentStatus->lightshield = (digitalRead(inputs.lightshield) == LOW);
     if (inputs.midshield   != 255) currentStatus->midshield   = (digitalRead(inputs.midshield)   == LOW);
-    if (inputs.lbx         != 255) currentStatus->lbx         = (digitalRead(inputs.lbx)         == LOW);
 
 }
 

@@ -29,7 +29,6 @@ public:
         original_Pinout.cDown        =  12;
         original_Pinout.cLeft        =   9;
         original_Pinout.cRight       =  14;
-        original_Pinout.lbx          = 255;
 
         multiplexer  = 255;
         consoleData  =  A5;
